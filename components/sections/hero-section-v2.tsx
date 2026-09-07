@@ -61,11 +61,10 @@ export function HeroSectionV2() {
               average audio.
             </span>
           </h1>
-          <p className="mt-2 max-w-[50ch] text-base leading-relaxed text-slate-700 md:text-lg">
-            Walk into a room that listens not just records. A Shahpur Jat studio
-            for the moment your{" "}
-            <span className="font-bold text-blue-500">story</span> finally
-            breaks through.
+          <p className="mt-2 max-w-[53ch] text-base leading-relaxed text-slate-700 md:text-lg">
+            From music and podcasts to voiceovers, we help{" "}
+            <span className="font-bold text-blue-500">creators</span> sound
+            their best.
           </p>
           <Button
             nativeButton={false}
