@@ -1,19 +1,27 @@
-import { Button } from "@/components/ui/button"
+import ChromaticImageProductHeroDemo from "@/components/chromatic-image-product-hero-demo"
+import { ContactSection } from "@/components/sections/contact-section"
+import { HeroSectionV2 } from "@/components/sections/hero-section-v2"
+import { FaqSection } from "@/components/sections/faq-section"
+import { FooterSection } from "@/components/sections/footer-section"
+import { ServicesSection } from "@/components/sections/services-section"
+import { SpacesSection } from "@/components/sections/spaces-section"
+import { StudioIntroSection } from "@/components/sections/studio-intro-section"
+import { TeamSection } from "@/components/sections/team-section"
+import { TrainingSection } from "@/components/sections/training-section"
 
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
+    <main className="overflow-x-clip bg-background p-2 text-foreground sm:p-3">
+      <HeroSectionV2 />
+      {/* <ChromaticImageProductHeroDemo /> */}
+      <StudioIntroSection />
+      <ServicesSection />
+      <SpacesSection />
+      <TrainingSection />
+      <TeamSection />
+      <FaqSection />
+      <ContactSection />
+      <FooterSection />
+    </main>
   )
 }
