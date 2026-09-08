@@ -5,7 +5,7 @@ import {
   motion,
   useInView,
   useReducedMotion,
-  type Variants,
+  type Transition,
 } from "motion/react"
 import { useEffect, useRef, type SVGProps } from "react"
 
@@ -6439,28 +6439,16 @@ const EASE_DRAW = [0.5, 0, 0.15, 1] as const
 const DRAW_DUR = 0.55
 const STEP = 0.18
 
-const draw: Variants = {
-  hidden: { pathLength: 0, fillOpacity: 0, strokeOpacity: 1 },
-  show: (cfg: { index: number }) => ({
-    pathLength: 1,
-    fillOpacity: [0, 0, 1],
-    strokeOpacity: [1, 1, 0],
-    transition: {
-      delay: cfg.index * STEP,
-      pathLength: { duration: DRAW_DUR, ease: EASE_DRAW },
-      fillOpacity: {
-        duration: DRAW_DUR,
-        times: [0, 0.75, 1],
-        ease: "easeOut",
-      },
-      strokeOpacity: {
-        duration: DRAW_DUR,
-        times: [0, 0.6, 1],
-        ease: "easeOut",
-      },
-    },
-  }),
-}
+// Per-path transition with its ABSOLUTE start delay on the shared timeline.
+// Applied directly via each path's own `transition` prop — variant-inherited
+// animations in motion v13 ignore element-level transitions, so we drive each
+// path with explicit initial/animate objects instead of shared variants.
+const drawTransition = (index: number): Transition => ({
+  delay: index * STEP,
+  pathLength: { duration: DRAW_DUR, ease: EASE_DRAW },
+  fillOpacity: { duration: DRAW_DUR, times: [0, 0.75, 1], ease: "easeOut" },
+  strokeOpacity: { duration: DRAW_DUR, times: [0, 0.6, 1], ease: "easeOut" },
+})
 
 // Hand-drawn "boil" filter (per camillovisini.com/coding/simulating-hand-drawn-motion-with-svg-filters,
 // same as P9-Hub's p9-hand): turbulence displaces the artwork and a seed
@@ -6498,8 +6486,6 @@ export function HeroDoodleRecordingSession({
       role="img"
       aria-label="Hand-drawn studio journey: walking in, recording in the booth, and mixing the take"
       className={className}
-      initial={drawIn && !reduce ? "hidden" : false}
-      animate={drawIn ? (entered || reduce ? "show" : "hidden") : undefined}
       {...svgProps}
     >
       <defs>
@@ -6524,6 +6510,11 @@ export function HeroDoodleRecordingSession({
       <g filter={drawIn && !reduce ? "url(#doodle-wobble)" : undefined}>
         {(() => {
           let index = 0
+          /* Explicit per-path animation (not inherited variants): motion v13
+             ignores element-level `transition` on variant-inherited animate,
+             which would collapse the sequential timeline into one fade. */
+          const active = drawIn && !reduce
+          const show = active && entered
           return LAYERS.map((layer) => (
             <motion.g
               key={layer.id}
@@ -6543,8 +6534,15 @@ export function HeroDoodleRecordingSession({
                     strokeWidth={drawIn ? 1.2 : undefined}
                     strokeLinejoin="round"
                     strokeLinecap="round"
-                    variants={drawIn ? draw : undefined}
-                    custom={{ index: drawIn && !reduce ? i : 0 }}
+                    initial={active ? { pathLength: 0, fillOpacity: 0, strokeOpacity: 1 } : false}
+                    animate={
+                      active
+                        ? show
+                          ? { pathLength: 1, fillOpacity: [0, 0, 1], strokeOpacity: [1, 1, 0] }
+                          : { pathLength: 0, fillOpacity: 0, strokeOpacity: 1 }
+                        : undefined
+                    }
+                    transition={active ? drawTransition(i) : undefined}
                   />
                 )
               })}
