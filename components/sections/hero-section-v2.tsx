@@ -1,11 +1,11 @@
 "use client"
-import Image from "next/image"
 import Link from "next/link"
 import { motion, useReducedMotion } from "motion/react"
 import { ArrowTurnUpIcon, AudioLinesIcon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
 
 import { Button } from "@/components/ui/button"
+import HeroDoodleRecordingSession from "@/components/sections/hero-doodle-recording-session"
 
 const nav = [
   { href: "#studio", label: "Studio" },
@@ -103,14 +103,7 @@ export function HeroSectionV2() {
 
       <div className="relative mx-auto w-full max-w-272 px-4 pb-6 sm:px-6 md:-mt-4 md:px-8 md:pb-10">
         <div className="overflow-hidden">
-          <Image
-            src="/hero/options/hero-doodle-v2-a-recording-session.webp"
-            alt="Hand-drawn studio journey: walking in, recording in the booth, and mixing the take"
-            width={1280}
-            height={720}
-            priority
-            className="h-auto w-full"
-          />
+          <HeroDoodleRecordingSession drawIn className="h-auto w-full" />
         </div>
       </div>
     </section>
