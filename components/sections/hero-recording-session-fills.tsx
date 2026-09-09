@@ -75,9 +75,7 @@ export function HeroRecordingSessionFills() {
       />
       {/* singer headphone stays white (line art) — no fill */}
 
-      {/* mic body + clip (tuned to simplified outline, no spill) */}
-      <rect x={627} y={200} width={24} height={128} rx={9} fill={GEAR} stroke="none" />
-      <rect x={646} y={335} width={8} height={258} fill={GEAR} stroke="none" />
+      {/* mic stays white (line art) — no fill */}
 
       {/* engineer trousers first so the maroon hem tucks over the lap.
           Open ink: desk side is never trousers. Whole trousers like
