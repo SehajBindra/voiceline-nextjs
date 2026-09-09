@@ -106,8 +106,12 @@ export function HeroRecordingSessionFills() {
         fill={MAROON}
         stroke="none"
       />
-      {/* engineer hair (open outline -> small inset blob, no spill/face) */}
-      <ellipse cx={1055} cy={208} rx={16} ry={9} fill={GEAR} stroke="none" />
+      {/* engineer hair (closed mask like walker/singer, face stays white) */}
+      <path
+        d="M1048,202 L1048,210 L1051,214 L1043,214 L1044,220 L1051,225 L1055,225 L1067,219 L1078,232 L1089,237 L1087,251 L1091,269 L1107,263 L1116,270 L1118,278 L1112,292 L1112,297 L1121,308 L1133,311 L1150,295 L1158,280 L1162,265 L1165,250 L1166,240 L1162,220 L1153,208 L1140,205 L1119,200 L1088,198 L1070,193 L1065,193 L1067,204 L1059,205 Z"
+        fill={GEAR}
+        stroke="none"
+      />
     </g>
   );
 }
