@@ -5,7 +5,7 @@ import { ArrowTurnUpIcon, AudioLinesIcon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
 
 import { Button } from "@/components/ui/button"
-import HeroDoodleRecordingSession from "@/components/sections/hero-doodle-recording-session"
+import { HeroSessionDuetMorph } from "@/components/sections/hero-session-duet-morph"
 
 const nav = [
   { href: "#studio", label: "Studio" },
@@ -103,7 +103,7 @@ export function HeroSectionV2() {
 
       <div className="relative mx-auto w-full max-w-272 px-4 pb-6 sm:px-6 md:-mt-4 md:px-8 md:pb-10">
         <div className="overflow-hidden">
-          <HeroDoodleRecordingSession drawIn className="h-auto w-full" />
+          <HeroSessionDuetMorph className="relative mx-auto w-full overflow-hidden rounded-lg bg-white md:rounded-xl" />
         </div>
       </div>
     </section>

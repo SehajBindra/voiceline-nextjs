@@ -1,4 +1,3 @@
-import ChromaticImageProductHeroDemo from "@/components/chromatic-image-product-hero-demo"
 import { ContactSection } from "@/components/sections/contact-section"
 import { HeroSectionV2 } from "@/components/sections/hero-section-v2"
 import { FaqSection } from "@/components/sections/faq-section"
