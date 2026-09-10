@@ -43,11 +43,11 @@ export function TrainingArchHero() {
           <NavbarButton
             href="#enquire"
             variant="gradient"
-            className="rounded-sm from-blue-400 to-blue-600 hover:from-slate-500 hover:to-slate-800"
+            className="rounded-sm from-blue-400 to-blue-600"
           >
             Enquire about training
           </NavbarButton>
-          <NavbarButton href="#courses" variant="secondary">
+          <NavbarButton href="#courses" variant="primary">
             View courses
           </NavbarButton>
         </>

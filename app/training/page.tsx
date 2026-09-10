@@ -38,7 +38,7 @@ export default function TrainingPage() {
       <TrainingFeaturesSection />
       {/*<TrainingHudsonSection />*/}
       {/*<TrainingExpertsSection />*/}
-      {/*<TrainingCoursesSection />*/}
+      <TrainingCoursesSection />
       {/*<TrainingEnquireSection />*/}
     </main>
   )
