@@ -8,7 +8,6 @@ export default function Page() {
   return (
     <main className="overflow-x-clip bg-background p-2 text-foreground sm:p-3">
       <HeroSectionV2 />
-      {/* <ChromaticImageProductHeroDemo /> */}
       <StudioIntroSection />
       {/*<ServicesSection />*/}
       <SpacesSection />
