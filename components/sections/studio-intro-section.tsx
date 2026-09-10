@@ -9,15 +9,15 @@ export function StudioIntroSection() {
       id="studio"
       className="mt-2 overflow-hidden rounded-2xl bg-card text-card-foreground sm:mt-3"
     >
-      <div className="grid min-h-[72svh] items-center gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-12 lg:py-28">
+      <div className="grid min-h-[72svh] items-center gap-12 px-5 py-20 sm:px-0 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:py-28">
         <div className="max-w-xl">
-          <h2 className="text-[clamp(2.6rem,5.8vw,5rem)] font-medium leading-[0.96] tracking-[-0.03em] text-balance">
+          <h2 className="text-[clamp(2.6rem,5.8vw,5rem)] leading-[0.96] font-medium tracking-[-0.03em] text-balance">
             Most studios start the work. This one finishes it.
           </h2>
           <p className="mt-7 max-w-md text-base/7 text-muted-foreground sm:text-lg/8">
             Voiceline is in Shahpur Jat. Treated rooms, in-house engineers,
-            Hudson Voice Technique training. One building in Delhi NCR. You
-            are not driving across town for a mix or a retake.
+            Hudson Voice Technique training. One building in Delhi NCR. You are
+            not driving across town for a mix or a retake.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button

@@ -1,11 +1,7 @@
-import { ContactSection } from "@/components/sections/contact-section"
 import { HeroSectionV2 } from "@/components/sections/hero-section-v2"
 import { FaqSection } from "@/components/sections/faq-section"
-import { FooterSection } from "@/components/sections/footer-section"
-import { ServicesSection } from "@/components/sections/services-section"
 import { SpacesSection } from "@/components/sections/spaces-section"
 import { StudioIntroSection } from "@/components/sections/studio-intro-section"
-import { TeamSection } from "@/components/sections/team-section"
 import { TrainingSection } from "@/components/sections/training-section"
 
 export default function Page() {
@@ -14,13 +10,12 @@ export default function Page() {
       <HeroSectionV2 />
       {/* <ChromaticImageProductHeroDemo /> */}
       <StudioIntroSection />
-      <ServicesSection />
+      {/*<ServicesSection />*/}
       <SpacesSection />
       <TrainingSection />
-      <TeamSection />
+      {/*<TeamSection />*/}
       <FaqSection />
-      <ContactSection />
-      <FooterSection />
+      {/*<ContactSection />*/}
     </main>
   )
 }

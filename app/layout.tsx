@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Geist } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
+import { SiteNavbar } from "@/components/site-navbar"
+import { FooterSection } from "@/components/sections/footer-section"
 
 const siteUrl = "https://voiceline.in"
 const siteName = "Voiceline Studio"
@@ -104,12 +106,16 @@ const studioJsonLd = {
   ],
 }
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'})
-
-const fontMono = Geist_Mono({
+const geist = Geist({
   subsets: ["latin"],
-  variable: "--font-mono",
+  weight: ["400", "500"],
+  variable: "--font-sans",
 })
+
+// const fontMono = Geist_Mono({
+//   subsets: ["latin"],
+//   variable: "--font-mono",
+// })
 
 export default function RootLayout({
   children,
@@ -120,14 +126,22 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", geist.variable)}
+      className={cn(
+        "mx-auto max-w-7xl sm:px-0",
+        // fontMono.variable,
+        geist.variable
+      )}
     >
       <body>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(studioJsonLd) }}
         />
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <SiteNavbar />
+          {children}
+          <FooterSection />
+        </ThemeProvider>
       </body>
     </html>
   )

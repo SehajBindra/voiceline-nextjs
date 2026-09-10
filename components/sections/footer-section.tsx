@@ -22,7 +22,7 @@ export function FooterSection() {
   return (
     <footer
       aria-label="Voiceline Studio footer"
-      className="mt-2 overflow-hidden rounded-2xl bg-[#081d3b] text-white sm:mt-3"
+      className="mt-2 overflow-hidden rounded-2xl bg-gradient-to-b from-blue-400 to-blue-600 text-white sm:mt-3"
     >
       <div className="px-5 pt-14 sm:px-8 sm:pt-16 lg:px-12">
         <div className="grid gap-10 pb-12 lg:grid-cols-[1.2fr_0.6fr_0.6fr_0.8fr]">
@@ -86,9 +86,7 @@ export function FooterSection() {
             >
               +91 935-018-8055
             </Link>
-            <p className="text-sm/6 text-white/50">
-              Shahpur Jat, Delhi NCR
-            </p>
+            <p className="text-sm/6 text-white/50">Shahpur Jat, Delhi NCR</p>
           </div>
         </div>
 

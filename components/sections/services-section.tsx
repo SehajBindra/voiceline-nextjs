@@ -4,23 +4,28 @@ import { Separator } from "@/components/ui/separator"
 const services = [
   {
     title: "Vocal & voiceover recording",
-    detail: "Neutral Hindi and English, with someone in the room directing you on mic.",
+    detail:
+      "Neutral Hindi and English, with someone in the room directing you on mic.",
   },
   {
     title: "Music production",
-    detail: "First take to master, in Studio One 5, with the same ears throughout.",
+    detail:
+      "First take to master, in Studio One 5, with the same ears throughout.",
   },
   {
     title: "Podcast recording",
-    detail: "A dedicated podcast room. Multi-mic. Built for long conversations.",
+    detail:
+      "A dedicated podcast room. Multi-mic. Built for long conversations.",
   },
   {
     title: "Dubbing & dialogue",
-    detail: "Replacement lines and sync for film, OTT, and ads. Tight and on brief.",
+    detail:
+      "Replacement lines and sync for film, OTT, and ads. Tight and on brief.",
   },
   {
     title: "Sound editing & design",
-    detail: "Cleanup, ambience, foley, background music. The work that makes the track sit.",
+    detail:
+      "Cleanup, ambience, foley, background music. The work that makes the track sit.",
   },
 ] as const
 
@@ -29,13 +34,13 @@ export function ServicesSection() {
     <section
       id="services"
       aria-labelledby="services-heading"
-      className="mt-2 overflow-hidden rounded-2xl bg-[#081d3b] text-white sm:mt-3"
+      className="mt-2 overflow-hidden rounded-2xl bg-accent-foreground text-white sm:mt-3"
     >
-      <div className="grid gap-16 px-5 py-20 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-24 lg:px-12 lg:py-28">
+      <div className="grid gap-16 px-5 py-20 lg:grid-cols-[0.95fr_1.05fr] lg:gap-24 lg:py-28">
         <div className="max-w-lg">
           <h2
             id="services-heading"
-            className="text-[clamp(2.4rem,5vw,4.5rem)] font-medium leading-[0.98] tracking-[-0.03em] text-balance"
+            className="text-[clamp(2.4rem,5vw,4.5rem)] leading-[0.98] font-medium tracking-[-0.03em] text-balance"
           >
             You should not need three studios to finish one project.
           </h2>
