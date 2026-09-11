@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { useState } from "react"
 
+import { Logo } from "@/components/logo"
 import {
   MobileNav,
   MobileNavHeader,
@@ -14,13 +15,9 @@ import {
   NavbarButton,
 } from "@/components/ui/resizable-navbar"
 
-// Taken from the former hero header in
-// components/sections/hero-section-v2.tsx so the global navbar
-// stays in sync with the landing anchors.
 const navItems = [
-  { name: "Studio", link: "#studio" },
   { name: "Services", link: "#services" },
-  { name: "Spaces", link: "#spaces" },
+  { name: "Our Work", link: "#spaces" },
   { name: "Training", link: "/training" },
 ] as const
 
@@ -34,9 +31,9 @@ export function SiteNavbar() {
         <Link
           href="/"
           aria-label="Voiceline home"
-          className="relative z-20 mr-4 flex items-center px-2 py-1 text-xl font-bold tracking-tight text-foreground dark:text-foreground"
+          className="relative z-20 mr-4 flex items-center px-2 py-1"
         >
-          Voiceline
+          <Logo accent="#000" className="h-8 w-auto" aria-hidden="true" />
         </Link>
         <NavItems items={[...navItems]} />
         <div className="relative z-20 flex items-center gap-4">
@@ -56,9 +53,9 @@ export function SiteNavbar() {
           <Link
             href="/"
             aria-label="Voiceline home"
-            className="flex items-center px-2 py-1 text-xl font-bold tracking-tight text-[#1c1915] dark:text-white"
+            className="flex items-center px-2 py-1"
           >
-            Voiceline
+            <Logo accent="#000" className="h-8 w-auto" aria-hidden="true" />
           </Link>
           <MobileNavToggle
             isOpen={isMobileMenuOpen}
