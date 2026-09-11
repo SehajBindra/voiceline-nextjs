@@ -30,7 +30,7 @@ const courses = [
     titleAfter: " course",
     story: "Join a cohort → learn together → workplace-ready speaking skills",
     description:
-      "Open-enrollment batches for individuals and small groups looking to build the same workplace communication and speaking skills as our corporate programs — without needing a company to sponsor it. Runs on a fixed schedule with a small cohort, so you still get personal attention and practical coaching.",
+      "Open-enrollment batches for individuals and small groups looking to build the same workplace communication and speaking skills as our corporate programs, without needing a company to sponsor it. Runs on a fixed schedule with a small cohort, so you still get personal attention and practical coaching.",
     detail: "Fixed schedule, small cohort, practical coaching in the studio.",
     image: "/training/photos/course-group.jpg",
     imageAlt:
@@ -42,7 +42,7 @@ const courses = [
     story:
       "Assess your team → tailor the curriculum → measurable communication gains",
     description:
-      "Delivered on-site or in-studio for teams, structured around your organization's proficiency levels and communication goals — as delivered for corporates like Pristine Waters, Mergen Compass, and others.",
+      "Delivered on-site or in-studio for teams, structured around your organization's proficiency levels and communication goals, as delivered for corporates like Pristine Waters, Mergen Compass, and others.",
     detail:
       "On-site or in-studio. Attendance tracking and workplace-specific scripts included.",
     image: "/training/photos/course-corporate.jpg",
