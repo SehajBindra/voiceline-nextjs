@@ -11,7 +11,7 @@ const slateChip =
 
 const easeOut = [0.23, 1, 0.32, 1] as const
 
-const rakeshPortrait = "/training/photos/rakesh-sir-front-page.webp"
+const rakeshPortrait = "/training/rakesh-jagtiani.jpg"
 
 const courses = [
   {
@@ -21,7 +21,7 @@ const courses = [
     description:
       "Experience personalized attention and tailored guidance through our One-on-One Training. This voiceover training course ensures a transformative journey towards becoming a more influential and confident communicator, customized to your specific needs.",
     detail: "Delivered at Voiceline Studio in Shahpur Jat.",
-    image: "/training/photos/course-one-on-one.jpg",
+    image: "/training/one-on-one-course.jpeg",
     imageAlt:
       "A trainee wearing headphones and reading from a script during a one-on-one voice training session at Voiceline Studio",
   },
@@ -45,7 +45,7 @@ const courses = [
       "Delivered on-site or in-studio for teams, structured around your organization's proficiency levels and communication goals, as delivered for corporates like Pristine Waters, Mergen Compass, and others.",
     detail:
       "On-site or in-studio. Attendance tracking and workplace-specific scripts included.",
-    image: "/training/photos/course-corporate.jpg",
+    image: "/training/corporate-voice-training.jpeg",
     imageAlt:
       "Corporate voice training session with a team seated around a conference table with Voiceline training materials",
   },
