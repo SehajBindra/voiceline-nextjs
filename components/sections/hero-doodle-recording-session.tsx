@@ -6426,7 +6426,7 @@ const TRANSFORM = "translate(0 720) scale(0.5 -0.5)"
 
 // Pen draws each path line-by-line in paint order, P9-Hub style
 // (components/ui/hero-journey-svg.tsx): stroke leads, fill fades in as the
-// stroke reaches its end, then the temporary stroke fades out — so the final
+// stroke reaches its end, then the temporary stroke fades out, so the final
 // frame is exactly the flat artwork, pixel perfect.
 //
 // Unlike P9-Hub (hundreds of tiny line-art paths, so a small stagger already
@@ -6440,7 +6440,7 @@ const DRAW_DUR = 0.55
 const STEP = 0.18
 
 // Per-path transition with its ABSOLUTE start delay on the shared timeline.
-// Applied directly via each path's own `transition` prop — variant-inherited
+// Applied directly via each path's own `transition` prop, variant-inherited
 // animations in motion v13 ignore element-level transitions, so we drive each
 // path with explicit initial/animate objects instead of shared variants.
 const drawTransition = (index: number): Transition => ({

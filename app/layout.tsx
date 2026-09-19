@@ -1,8 +1,6 @@
 import type { Metadata, Viewport } from "next"
 import { Geist } from "next/font/google"
-
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 import { SiteNavbar } from "@/components/site-navbar"
 import { FooterSection } from "@/components/sections/footer-section"
@@ -10,12 +8,12 @@ import { FooterSection } from "@/components/sections/footer-section"
 const siteUrl = "https://voiceline.in"
 const siteName = "Voiceline Studio"
 const siteDescription =
-  "Book Voiceline Studio in Shahpur Jat, Delhi NCR for voiceover, podcast, music production, mixing & dubbing — with Hudson Voice Technique training."
+  "Book Voiceline Studio in Shahpur Jat, Delhi NCR for voiceover, podcast, music production, mixing and dubbing, with Hudson Voice Technique training."
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Voiceline Studio — Recording Studio in Delhi NCR",
+    default: "Voiceline Studio | Recording Studio in Delhi NCR",
     template: "%s | Voiceline Studio",
   },
   description: siteDescription,
@@ -43,7 +41,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "/",
     siteName,
-    title: "Voiceline Studio — Recording Studio in Delhi NCR",
+    title: "Voiceline Studio | Recording Studio in Delhi NCR",
     description: siteDescription,
     images: [
       {
@@ -56,7 +54,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Voiceline Studio — Recording Studio in Delhi NCR",
+    title: "Voiceline Studio | Recording Studio in Delhi NCR",
     description: siteDescription,
     images: ["/hero/studio-hero.webp"],
   },
@@ -137,11 +135,11 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(studioJsonLd) }}
         />
-        <ThemeProvider>
-          <SiteNavbar />
-          {children}
-          <FooterSection />
-        </ThemeProvider>
+        {/*<ThemeProvider>*/}
+        <SiteNavbar />
+        {children}
+        <FooterSection />
+        {/*</ThemeProvider>*/}
       </body>
     </html>
   )

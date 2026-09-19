@@ -20,7 +20,7 @@ import { HeroPodcastDuetSvg } from "@/components/sections/hero-podcast-duet-svg"
  *
  * The example interpolates tiny icon `d` strings with flubber
  * (`useMotionValue` + `useTransform` + `animate`). Our two scenes are
- * ~37KB / ~69KB potrace traces with completely different topology —
+ * ~37KB / ~69KB potrace traces with completely different topology,
  * per-frame `d` interpolation there would run on the main thread, jank,
  * and melt into a blob mid-transition. So we keep the exact same Motion
  * primitives (progress MotionValue -> derived values -> animate()),
@@ -79,7 +79,7 @@ export function HeroSessionDuetMorph({
     ["scale(0.985)", "scale(1)"]
   )
 
-  /* Retargetable morph — interrupting mid-flight reverses smoothly. */
+  /* Retargetable morph, interrupting mid-flight reverses smoothly. */
   useEffect(() => {
     if (reduce) {
       progress.set(index)

@@ -42,9 +42,6 @@ function FeatureColumn({
         >
           <dt className="max-w-[18ch] text-lg leading-snug font-medium text-balance">
             <span className="text-lg font-medium">{feature.title}</span>
-            <span className="font-mono text-sm tracking-wide text-neutral-400 tabular-nums dark:text-neutral-500">
-              {feature.number}
-            </span>
           </dt>
           <dd className="max-w-[40ch] text-base/7 text-pretty text-[#081d3b]/68 sm:text-sm/6">
             {feature.description}

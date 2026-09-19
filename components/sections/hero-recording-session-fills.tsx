@@ -1,12 +1,12 @@
 "use client";
 
 /* Pixel-perfect interior fills for the BW recording-session doodle.
-   Static instant fills — only ink TRACE_D animates.
+   Static instant fills, only ink TRACE_D animates.
    Shapes derived from public/hero/options/hero-doodle-v2-a-recording-session-bw-simplified.png
    (1280x720, same as viewBox) via flood-fill of white interiors + 1px
    bleed under the 3-4px ink, so edges hide under TRACE_D with zero spill.
    Singer / engineer trousers are open in the ink (legs never close), so those
-   fills are inset polygons of the body — hoodie hem, hip, seat/calf — never
+   fills are inset polygons of the body, hoodie hem, hip, seat/calf, never
    the booth frames, desk side, or chair. Walker legs are closed masks.
    Black gear uses exact closed hair masks + inset ellipses.
    TRACE_D untouched. */
@@ -41,11 +41,11 @@ export function HeroRecordingSessionFills() {
         fill={GEAR}
         stroke="none"
       />
-      {/* walker headphone stays white (line art) — no fill */}
+      {/* walker headphone stays white (line art), no fill */}
 
       {/* singer trousers first so the maroon hem tucks over the top edge.
           Open ink: no closed legs. Hug outer leg strokes (left 456,
-          right inner+1, 1px bleed under 3-4px ink) like walker — diagonal,
+          right inner+1, 1px bleed under 3-4px ink) like walker, diagonal,
           not boxes. Right edge follows leg outward (560->566), not inward,
           so no white gap at lower right. Top tucks under maroon (y=469),
           bottom follows leg tips diagonally (574 left -> 554 right),
@@ -73,13 +73,13 @@ export function HeroRecordingSessionFills() {
         fill={GEAR}
         stroke="none"
       />
-      {/* singer headphone stays white (line art) — no fill */}
+      {/* singer headphone stays white (line art), no fill */}
 
-      {/* mic stays white (line art) — no fill */}
+      {/* mic stays white (line art), no fill */}
 
       {/* engineer trousers first so the maroon hem tucks over the lap.
           Open ink: desk side is never trousers. Whole trousers like
-          walker/singer — diagonal, not boxes, 1px bleed under ink:
+          walker/singer, diagonal, not boxes, 1px bleed under ink:
           lap hugs thigh-top diagonal, then hip ink down to the butt
           (560->592), curves with the chair back (1189/1196/1185) to the
           seat, and back along the seat (629->635) to the knee. Knee spans

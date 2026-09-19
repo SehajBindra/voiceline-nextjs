@@ -33,7 +33,7 @@ export default function ChromaticImageProductHeroDemo() {
                 Your voice has somewhere to land
               </h3>
               <p className="relative max-w-[40ch] text-base/7 text-pretty text-[#1e2a5e]/80 sm:text-lg/7">
-                Walk into a room that listens — not just records. A Delhi studio
+                Walk into a room that listens, not just records. A Delhi studio
                 built for the moment your story finally breaks through.
               </p>
             </div>

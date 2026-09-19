@@ -115,7 +115,7 @@ export function HeroRecordingSessionBwSvg({
             custom={{ delay: reduce ? 0 : 0.15, stagger: reduce ? 0 : 0.05 }}
             data-part="recording-session"
           >
-            {/* solid underlays — static instant fills, behind the ink tile.
+            {/* solid underlays, static instant fills, behind the ink tile.
                 See hero-recording-session-fills.tsx. TRACE_D below untouched. */}
             <HeroRecordingSessionFills />
             {/* ink tile: the approved linework, untouched */}
