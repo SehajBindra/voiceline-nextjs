@@ -64,7 +64,9 @@ function Headline({
   return (
     <>
       {before}
-      <span className={cn(slateChip, "inline-block px-2 py-0 whitespace-nowrap")}>
+      <span
+        className={cn(slateChip, "inline-block px-2 py-0 whitespace-nowrap")}
+      >
         {accentWord}
       </span>
       {rest.join(accentWord)}
@@ -83,9 +85,6 @@ function FactBody({ fact }: { fact: ServicePageFact }) {
         />
       </div>
       <div>
-        {/*<dt className="font-mono text-xs tracking-wide text-neutral-400 uppercase">
-          {fact.label}
-        </dt>*/}
         <dd className="max-w-[40ch] text-[15px] text-neutral-800">
           {fact.value}
         </dd>
@@ -127,7 +126,7 @@ function ArrowToImage({ toward }: { toward: "down-right" | "up-left" }) {
       <svg
         viewBox="0 0 88 64"
         fill="none"
-        className="absolute right-24 bottom-10 h-full w-[5.75rem] text-neutral-400 sm:w-24"
+        className="absolute right-24 bottom-0 h-full w-[5.75rem] text-neutral-400 sm:w-24"
       >
         <path d="M82 60 C 60 58, 36 38, 14 6" {...stroke} />
         <path d="M24 14 L12 6 L20 20" {...stroke} strokeLinejoin="round" />
@@ -150,7 +149,7 @@ function FactCallout({
         "absolute z-10 max-w-[min(calc(100%-1rem),17rem)] sm:max-w-xs",
         isTopLeft
           ? "top-0 left-0 lg:-top-2 lg:-left-8 xl:-left-12"
-          : "right-0 bottom-0 lg:-right-6 lg:-bottom-10 xl:-right-10",
+          : "right-0 bottom-0 sm:-bottom-4 lg:-right-6 xl:-right-10"
       )}
     >
       <dl className="flex flex-col gap-0">
@@ -216,23 +215,15 @@ export function ServicePage({
 
                 className={cn(
                   slateChip,
-                  "h-auto px-5 py-2.5 text-sm font-bold transition-[transform,opacity] duration-200 hover:-translate-y-0.5 hover:to-slate-800",
+                  "h-auto px-5 py-2.5 text-sm font-bold transition-[transform,opacity] duration-200 hover:-translate-y-0.5 hover:to-slate-800"
                 )}
-              >
-                Get a quote
-              </Button>
-              <Button
-                nativeButton={false}
-                render={<Link href="#contact" />}
-                variant="outline"
-                className="h-auto px-5 py-2.5 text-sm font-bold"
               >
                 Book a session
               </Button>
             </div>
           </div>
           <div
-            className="relative w-full pt-28 pb-32 sm:pt-32 sm:pb-36 lg:pt-24 lg:pb-28"
+            className="relative w-full pt-28 pb-28 sm:pt-32 sm:pb-32 lg:pt-24 lg:pb-24"
             aria-label="Good to know"
           >
             {facts[0] ? (
