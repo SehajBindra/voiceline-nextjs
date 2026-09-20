@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "mcp-safari": {
+      "command": "mcp-safari",
+      "args": []
+    }
+  }
+}

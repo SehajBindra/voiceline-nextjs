@@ -6,6 +6,8 @@ import { HugeiconsIcon } from "@hugeicons/react"
 
 import { cn } from "cn"
 
+import type { ServiceOfferingsBentoProps } from "./service-offerings-bento"
+import { ServiceOfferingsBento } from "./service-offerings-bento"
 import { Button } from "@/components/ui/button"
 import {
   Breadcrumb,
@@ -45,6 +47,7 @@ export interface ServicePageProps {
   marginalia: string
   groups: ServicePageGroup[]
   facts: ServicePageFact[]
+  offeringsBento?: ServiceOfferingsBentoProps
 }
 
 const slateChip =
@@ -179,6 +182,7 @@ export function ServicePage({
   marginalia,
   groups,
   facts,
+  offeringsBento,
 }: ServicePageProps) {
   return (
     <main className="overflow-x-clip bg-background text-foreground">
@@ -257,6 +261,9 @@ export function ServicePage({
           </div>
         </div>
       </section>
+
+      {/* Offerings bento */}
+      {offeringsBento ? <ServiceOfferingsBento {...offeringsBento} /> : null}
 
       {/* Detail groups */}
       {groups.map((group) => (

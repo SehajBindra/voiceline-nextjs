@@ -215,38 +215,66 @@ export const serviceCatalog: Record<ServiceSlug, ServiceCatalogEntry> = {
     image: "/services/podcast-room-1.jpeg",
     imageAlt: "Podcast room at Voiceline Delhi for multi-mic recording",
     marginalia: "Podcast room · Multi-mic",
-    groups: [
-      {
-        heading: "What we offer",
-        items: [
-          {
-            title: "In-studio recording",
-            text: "Single host, multi-guest, and remote guest capture.",
-            icon: MicVocalIcon,
+    groups: [],
+    offeringsBento: {
+      heading: "What we offer",
+      subheading:
+        "Five steps, one studio in Shahpur Jat — from the first mic check to the published episode.",
+      cells: [
+        {
+          step: 1,
+          title: "In-studio recording",
+          text: "Single host, multi-guest, and remote guest capture with matched levels and headphone mixes.",
+          visual: {
+            kind: "doodle",
+            src: "/services/doodles/podcast.webp",
+            alt: "Two podcast hosts recording at a round table with microphones",
           },
-          {
-            title: "Audio editing",
-            text: "Noise cleanup, pacing, and filler-word removal.",
-            icon: ScissorsIcon,
+        },
+        {
+          step: 2,
+          title: "Audio editing",
+          text: "Noise cleanup, pacing, and filler-word removal so the conversation stays natural.",
+          visual: {
+            kind: "doodle",
+            src: "/services/doodles/editing.webp",
+            alt: "Engineer editing a multitrack timeline on studio monitors",
           },
-          {
-            title: "Mixing and mastering",
-            text: "Consistent episode-to-episode sound.",
-            icon: AudioLinesIcon,
+        },
+        {
+          step: 3,
+          title: "Mixing and mastering",
+          text: "Consistent loudness and tone from episode one through your latest release.",
+          visual: {
+            kind: "doodle",
+            src: "/services/doodles/podcast-mixing.webp",
+            alt: "Engineer mixing and mastering a podcast on a console with a waveform meter",
           },
-          {
-            title: "Intro, outro, and theme music",
-            text: "Original music produced for your show.",
-            icon: MusicNote01Icon,
+        },
+        {
+          step: 4,
+          title: "Intro, outro, and theme music",
+          text: "Original stingers and theme beds for your show’s identity.",
+          gridClass: "lg:col-span-3",
+          visual: {
+            kind: "doodle",
+            src: "/services/doodles/music.webp",
+            alt: "Producer working on theme music at a desk with monitors",
           },
-          {
-            title: "Video editing for video podcasts",
-            text: "Edits for YouTube, Instagram, and more, synced directly to your final audio.",
-            icon: ClapperboardIcon,
+        },
+        {
+          step: 5,
+          title: "Video editing for video podcasts",
+          text: "Multicam cuts, captions, and social clips synced to your final mix.",
+          gridClass: "lg:col-span-3",
+          visual: {
+            kind: "doodle",
+            src: "/services/doodles/podcast-video.webp",
+            alt: "Editor cutting a multicam video podcast on a timeline with captions",
           },
-        ],
-      },
-    ],
+        },
+      ],
+    },
     facts: [
       {
         label: "Format",
