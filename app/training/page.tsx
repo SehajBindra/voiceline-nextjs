@@ -1,7 +1,8 @@
 import type { Metadata } from "next"
-import { TrainingArchHero } from "@/components/sections/training-arch-hero"
-import { TrainingCoursesSection } from "@/components/sections/training-courses-section"
-import { TrainingFeaturesSection } from "@/components/sections/training-features-section"
+
+import { ArchHero } from "@/components/training/arch-hero"
+import { CoursesSection } from "@/components/training/courses-section"
+import { FeaturesSection } from "@/components/training/features-section"
 
 export const metadata: Metadata = {
   title: "Voice Training in Delhi",
@@ -29,9 +30,9 @@ export const metadata: Metadata = {
 export default function TrainingPage() {
   return (
     <main className="overflow-x-clip bg-background p-2 text-foreground sm:p-3">
-      <TrainingArchHero />
-      <TrainingFeaturesSection />
-      <TrainingCoursesSection />
+      <ArchHero />
+      <FeaturesSection />
+      <CoursesSection />
     </main>
   )
 }

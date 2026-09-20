@@ -1,8 +1,9 @@
 import type { Metadata } from "next"
-import { ServicesHero } from "@/components/sections/services-hero"
-import { ServicesRoomsSection } from "@/components/sections/services-rooms-section"
-import { ServicesOfferingsSection } from "@/components/sections/services-offerings-section"
-import { ServicesGearSection } from "@/components/sections/services-gear-section"
+
+import { GearSection } from "@/components/services/gear-section"
+import { Hero } from "@/components/services/hero"
+import { OfferingsSection } from "@/components/services/offerings-section"
+import { RoomsSection } from "@/components/services/rooms-section"
 
 export const metadata: Metadata = {
   title: "Studio Services in Delhi",
@@ -30,10 +31,10 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <main className="overflow-x-clip bg-background p-2 text-foreground">
-      <ServicesHero />
-      <ServicesRoomsSection />
-      <ServicesOfferingsSection />
-      <ServicesGearSection />
+      <Hero />
+      <RoomsSection />
+      <OfferingsSection />
+      <GearSection />
     </main>
   )
 }
